@@ -1,9 +1,10 @@
-(ns clojure-euler.solution-validator
+(ns clojure-euler.solutions
   (:require [clojure.java.io :as io]))
 
 (def solutions-filepath "solutions.csv")
 
-(defn problem#->solution
+(defn get-solution
+  "Takes the problem number (ex. problem-001) and returns the solution"
   [problem#]
   (as-> (io/resource solutions-filepath) csv
         (slurp csv)
@@ -11,12 +12,3 @@
         (filter #(clojure.string/includes? % problem#) csv)
         (mapcat #(clojure.string/split % #",") csv)
         (Integer/parseInt (second csv))))
-
-(defn validate
-  [problem# problem-function]
-  (println problem#)
-  (let [output (time (problem-function))
-        solution (problem#->solution problem#)]
-    (if (= solution output)
-      (println (str "Success! Answer is " output))
-      (println (str "Nope. Answer is not " output)))))

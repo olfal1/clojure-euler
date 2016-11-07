@@ -2,11 +2,11 @@
   (:require
     [clojure.core]))
 
-(defn multiple?
+(defn- multiple?
   [divisor number]
   (zero? (rem number divisor)))
 
-(defn solution-function
+(defn solution1
   "Sum all numbers smaller than 1000 and multiple of 3 or 5"
   []
   (->> (range 1000)
