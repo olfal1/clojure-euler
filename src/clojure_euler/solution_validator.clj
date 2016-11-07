@@ -14,6 +14,7 @@
 
 (defn validate
   [problem# problem-function]
+  (println problem#)
   (let [output (time (problem-function))
         solution (problem#->solution problem#)]
     (if (= solution output)
