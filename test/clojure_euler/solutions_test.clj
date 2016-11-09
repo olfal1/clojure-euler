@@ -1,8 +1,13 @@
 (ns clojure-euler.solutions-test
   (:require [clojure.test :refer :all]
             [clojure-euler.problem-001 :refer :all]
+            [clojure-euler.problem-002 :refer :all]
             [clojure-euler.solutions :refer :all]))
 
 (deftest problem-001-test
-  (testing "Problem 001"
-    (is (= (get-solution "problem-001") (solution1)))))
+  (testing "Solution 001"
+    (is (= (get-solution "problem-001") (solution001)))))
+
+(deftest problem-002-test
+  (testing "Solution 002"
+    (is (= (get-solution "problem-002") (solution002)))))
