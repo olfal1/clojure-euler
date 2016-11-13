@@ -3,7 +3,7 @@
     [clojure.core]
     [clojure-euler.math-helper :as math]))
 
-(defn solution001
+(defn solution-001
   "Sum all numbers smaller than 1000 and multiple of 3 or 5"
   []
   (->> (range 1000)

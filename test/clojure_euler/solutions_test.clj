@@ -7,11 +7,11 @@
 
 (deftest problem-001-test
   (testing "Solution 001"
-    (is (= (get-solution "problem-001") (solution001)))))
+    (is (= (get-solution "problem-001") (solution-001)))))
 
 (deftest problem-002-test
   (testing "Solution 002"
-    (is (= (get-solution "problem-002") (solution002)))))
+    (is (= (get-solution "problem-002") (solution-002)))))
 
 (deftest problem-003-test
   (testing "Solution 003"
