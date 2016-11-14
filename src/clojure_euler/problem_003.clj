@@ -1,7 +1,7 @@
 (ns clojure-euler.problem-003
   (require [clojure-euler.math-helper :as math]))
 
-(defn get-largest-prime-factor
+(defn- get-largest-prime-factor
   "Returns the largest prime factor of a number"
   [initial-number]
   (let [max-value (long (Math/sqrt initial-number))]

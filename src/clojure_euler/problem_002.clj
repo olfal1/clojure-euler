@@ -2,7 +2,7 @@
   (:require
     [clojure.core]))
 
-(defn fibonacci-seq
+(defn- fibonacci-seq
   "Lazy seq of infinite fibonacci terms"
   ([]
    (fibonacci-seq 1 2))
