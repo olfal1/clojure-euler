@@ -1,5 +1,5 @@
 (ns clojure-euler.problem-003
-  (require [clojure-euler.math-helper :as math-helper]))
+  (require [clojure-euler.math-helper :as math]))
 
 (defn get-largest-prime-factor
   "Returns the largest prime factor of a number"
@@ -9,7 +9,7 @@
            current-number 2]
       (if (or (> current-number max-value) (= current-number number))
         number
-        (if (math-helper/multiple? number current-number)
+        (if (math/multiple? number current-number)
           (recur (/ number current-number) current-number)
           (recur number (inc current-number)))))))
 
