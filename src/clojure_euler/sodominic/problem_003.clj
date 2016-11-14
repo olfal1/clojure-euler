@@ -1,8 +1,8 @@
-(ns clojure-euler.dom-problem-003
+(ns clojure-euler.sodominic.problem-003
   (require
     [clojure-euler.math-helper :as math]))
 
-(defn factors
+(defn- factors
   "Sodominic draft : finds the factors of a number"
   [number]
   (reduce (fn [factors current-number]
@@ -11,7 +11,7 @@
           []
           (range 1 (long (Math/sqrt number)))))
 
-(defn prime?
+(defn- prime?
   "Returns true if the number is a prime number"
   [number]
   (= 2 (count (factors number))))

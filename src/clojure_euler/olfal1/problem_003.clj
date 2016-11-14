@@ -1,10 +1,10 @@
-(ns clojure-euler.oli-problem-003
+(ns clojure-euler.olfal1.problem-003
   (:require
     [clojure.core]
     [clojure-euler.math-helper :as math]))
 
 ; Eratosthene's Sieve (too slow for large numbers)
-(defn find-primes-in-range
+(defn- find-primes-in-range
   "Returns all prime numbers of the given collection"
   ([range]
    (loop [primes []
@@ -16,25 +16,25 @@
          (recur (into [] primes) (into [] remaining-numbers)))))))
 
 ; faster solution
-(defn divisors
-  "Returns a list of the divisors of the given number"
+(defn- factors
+  "Returns a list of the factors of the given number"
   [number]
-  (loop [current-divisor 2
-         divisors-list []]
-    (if (> current-divisor (long (Math/sqrt number)))
-      divisors-list
-      (if (math/multiple? number current-divisor)
-        (recur (inc current-divisor) (concat divisors-list (set [current-divisor (/ number current-divisor)])))
-        (recur (inc current-divisor) divisors-list)))))
+  (loop [current-number 2
+         factors-list []]
+    (if (> current-number (long (Math/sqrt number)))
+      factors-list
+      (if (math/multiple? number current-number)
+        (recur (inc current-number) (concat factors-list (set [current-number (/ number current-number)])))
+        (recur (inc current-number) factors-list)))))
 
-(defn prime?
+(defn- prime?
   "Returns wether a number is a prime number"
   [number]
-  (empty? (divisors number)))
+  (empty? (factors number)))
 
-(defn solution003
+(defn solution-003
   "Finds the largest prime factor of 600851475143"
   []
-  (->> (divisors 600851475143)
+  (->> (factors 600851475143)
        (filter #(prime? %))
        (apply max)))
