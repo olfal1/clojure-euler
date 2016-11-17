@@ -1,7 +1,7 @@
 (ns clojure-euler.olfal1.problem-004
   (:require
     [clojure.string :as string]
-    [clojure-euler.math-helper :as math]))
+    [clojure-euler.helpers.math-helper :as math]))
 
 (defn- palindrome?
   "Returns whether a number is a palindrome."

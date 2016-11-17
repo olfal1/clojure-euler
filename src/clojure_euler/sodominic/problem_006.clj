@@ -1,5 +1,5 @@
 (ns clojure-euler.sodominic.problem-006
-  (:require [clojure-euler.math-helper :as math]))
+  (:require [clojure-euler.helpers.math-helper :as math]))
 
 (defn- sum-square-100-natural-numbers
   "Returns the sum of the square of the first 100 natural numbers"

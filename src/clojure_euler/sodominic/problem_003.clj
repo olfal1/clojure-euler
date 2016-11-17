@@ -1,6 +1,6 @@
 (ns clojure-euler.sodominic.problem-003
   (require
-    [clojure-euler.math-helper :as math]))
+    [clojure-euler.helpers.math-helper :as math]))
 
 (defn- factors
   "Sodominic draft : finds the factors of a number"

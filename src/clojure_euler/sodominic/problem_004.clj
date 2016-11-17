@@ -1,5 +1,5 @@
 (ns clojure-euler.sodominic.problem-004
-  (:require [clojure-euler.math-helper :as math]
+  (:require [clojure-euler.helpers.math-helper :as math]
             [clojure.string :as string]))
 
 (defn- palindrome?

@@ -1,7 +1,7 @@
 (ns clojure-euler.olfal1.problem-003
   (:require
     [clojure.core]
-    [clojure-euler.math-helper :as math]))
+    [clojure-euler.helpers.math-helper :as math]))
 
 ; Eratosthene's Sieve (too slow for large numbers)
 (defn- find-primes-in-range
@@ -28,7 +28,7 @@
         (recur (inc current-number) factors-list)))))
 
 (defn- prime?
-  "Returns wether a number is a prime number"
+  "Returns whether a number is a prime number"
   [number]
   (empty? (factors number)))
 
