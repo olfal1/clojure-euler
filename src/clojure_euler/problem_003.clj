@@ -2,7 +2,7 @@
   (require [clojure-euler.math-helper :as math]))
 
 (defn- get-largest-prime-factor
-  "Returns the largest prime factor of a number"
+  "Returns the largest prime factor of a number."
   [initial-number]
   (let [max-value (long (Math/sqrt initial-number))]
     (loop [number initial-number
@@ -14,6 +14,6 @@
           (recur number (inc current-number)))))))
 
 (defn solution-003
-  "Returns the largest prime factor of 600851475143"
+  "Returns the largest prime factor of 600851475143."
   []
   (get-largest-prime-factor 600851475143))
