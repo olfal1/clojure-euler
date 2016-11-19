@@ -36,5 +36,5 @@
   "Finds the largest prime factor of 600851475143"
   []
   (->> (factors 600851475143)
-       (filter #(prime? %))
+       (filter prime?)
        (apply max)))
