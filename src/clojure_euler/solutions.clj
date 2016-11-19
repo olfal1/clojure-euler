@@ -11,4 +11,4 @@
         (clojure.string/split csv #"\n")
         (filter #(clojure.string/includes? % problem#) csv)
         (mapcat #(clojure.string/split % #",") csv)
-        (Integer/parseInt (second csv))))
+        (read-string (second csv))))

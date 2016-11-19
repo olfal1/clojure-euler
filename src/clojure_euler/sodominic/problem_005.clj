@@ -14,7 +14,7 @@
 (defn solution-005
   "Returns the smallest number divisible by all the numbers between 1 and 20"
   []
-  (loop [current-number 6840]
+  (loop [current-number 6840]                               ; 6840 is the product of 20 * 19 * 18, for more efficiency
     (if (divisible-by-1-to-20? current-number)
       current-number
       (recur (+ current-number 6840)))))
