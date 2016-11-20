@@ -6,7 +6,7 @@
   (/ (* n (inc n)) 2))
 
 (defn- sum-square-first-n-integers
-  "Returns the sum of the square of the first n integers"
+  "Returns the sum of the square of the first n integers."
   [n]
   (/ (* n (inc n) (inc (* n 2))) 6))
 

@@ -1,5 +1,6 @@
 (ns clojure-euler.problem-003
-  (require [clojure-euler.math-helper :as math]))
+  (:require
+    [clojure-euler.helpers.math-helper :as math]))
 
 (defn- get-largest-prime-factor
   "Returns the largest prime factor of a number."

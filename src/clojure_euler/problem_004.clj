@@ -1,6 +1,7 @@
 (ns clojure-euler.problem-004
-  (:require [clojure-euler.helpers.math-helper :as math]
-            [clojure-euler.helpers.string-helper :as string]))
+  (:require
+    [clojure-euler.helpers.math-helper :as math]
+    [clojure-euler.helpers.string-helper :as string]))
 
 (defn- between-100-and-999?
   [number]
