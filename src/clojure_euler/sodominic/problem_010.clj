@@ -17,5 +17,5 @@
   "Returns the sum of all primes below two million"
   []
   (->> (range 2000000)
-       (filter #(math/prime? %))
+       (filter math/prime?)
        (reduce +)))

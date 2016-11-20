@@ -10,14 +10,9 @@
           []
           (range 1 (long (Math/sqrt number)))))
 
-(defn- prime?
-  "Returns true if the number is a prime number."
-  [number]
-  (= 2 (count (factors number))))
-
 (defn solution-003
   "Returns the highest prime factor of a number."
   []
   (->> (factors 600851475143)
-       (filter #(prime? %))
+       (filter math/prime?)
        (apply max)))

@@ -28,6 +28,6 @@
   "Finds the largest palindrome made from the product of two 3-digit numbers."
   []
   (->> (range 999999 100001 -1)
-       (filter #(string/palindrome? %))
-       (filter #(three-digit-factors? %))
+       (filter string/palindrome?)
+       (filter three-digit-factors?)
        (first)))
