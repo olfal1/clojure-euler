@@ -1,7 +1,7 @@
 (ns clojure-euler.helpers.math-helper)
 
 (defn multiple?
-  "Returns wheter the first number is a multiple of the second number."
+  "Returns whether the first number is a multiple of the second number."
   [number divisor]
   (zero? (rem number divisor)))
 

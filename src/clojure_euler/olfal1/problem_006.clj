@@ -1,6 +1,4 @@
-(ns clojure-euler.olfal1.problem-006
-  (:require
-    [clojure-euler.helpers.math-helper :as math]))
+(ns clojure-euler.olfal1.problem-006)
 
 (defn- sum-first-n-integers
   "Returns the sum of the first n integers."
