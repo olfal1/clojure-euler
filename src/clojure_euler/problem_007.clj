@@ -1,7 +1,11 @@
 (ns clojure-euler.problem-007
-  (:require [clojure-euler.sodominic.problem-007 :as sodominic]))
+  (:require
+    [clojure-euler.helpers.math-helper :as math]))
 
 (defn solution-007
-  "Returns the 10001st prime number"
+  "Finds the 10 001st prime number."
   []
-  (sodominic/solution-007))
+  (->> (range)
+       (filter math/prime?)
+       (take 10001)
+       (last)))

@@ -16,8 +16,8 @@
   "Returns a vector of prime factors smaller than limit.
    For example, prime factors smaller than 10 are 2^3, 3^2, 5 and 7."
   [limit]
-  (let [range (range 2 (+ limit 1))
-        primes (vec (filter #(math/prime? %) range))]
+  (let [range (range 2 (inc limit))
+        primes (vec (filter math/prime? range))]
     (loop [remaining-primes primes
            prime-factors []]
       (let [current-prime (last remaining-primes)]
