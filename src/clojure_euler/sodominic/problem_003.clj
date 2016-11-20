@@ -3,7 +3,7 @@
     [clojure-euler.helpers.math-helper :as math]))
 
 (defn- factors
-  "Sodominic draft : finds the factors of a number"
+  "Sodominic draft : finds the factors of a number."
   [number]
   (reduce (fn [factors current-number]
             (if (math/multiple? number current-number)
@@ -12,12 +12,12 @@
           (range 1 (long (Math/sqrt number)))))
 
 (defn- prime?
-  "Returns true if the number is a prime number"
+  "Returns true if the number is a prime number."
   [number]
   (= 2 (count (factors number))))
 
 (defn solution-003
-  "Returns the highest prime factor of a number"
+  "Returns the highest prime factor of a number."
   []
   (->> (factors 600851475143)
        (filter #(prime? %))

@@ -10,7 +10,7 @@
   (reduce * (map read-string (str/split string-number #""))))
 
 (defn solution-008
-  "Returns highest product of 13 adjacent digits in the number"
+  "Returns highest product of 13 adjacent digits in the number."
   []
   (loop [current-index 0
          highest-product 0]

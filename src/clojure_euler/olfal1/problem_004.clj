@@ -1,18 +1,8 @@
 (ns clojure-euler.olfal1.problem-004
   (:require
-    [clojure.string :as string]
+    [clojure-euler.helpers.string-helper :as string]
     [clojure-euler.helpers.math-helper :as math]))
 
-(defn- palindrome?
-  "Returns whether a number is a palindrome."
-  [number]
-  (let [number-string (str number)
-        number-size (count number-string)]
-    (if (even? number-size)
-      (let [first-half (subs number-string 0 (/ number-size 2))
-            second-half (subs number-string (/ number-size 2))]
-        (= first-half (string/reverse second-half)))
-      false)))
 
 (defn- between-100-and-999?
   [number]
@@ -38,6 +28,6 @@
   "Finds the largest palindrome made from the product of two 3-digit numbers."
   []
   (->> (range 999999 100001 -1)
-       (filter #(palindrome? %))
+       (filter #(string/palindrome? %))
        (filter #(three-digit-factors? %))
        (first)))

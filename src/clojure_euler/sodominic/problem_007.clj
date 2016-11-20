@@ -2,7 +2,7 @@
   (:require [clojure-euler.helpers.math-helper :as math]))
 
 (defn solution-007
-  "Returns the 10001st prime number"
+  "Returns the 10001st prime number."
   []
   (loop [current-number 1
          number-of-primes 0]

@@ -2,12 +2,12 @@
   (:require [clojure-euler.helpers.math-helper :as math]))
 
 (defn- sum-square-100-natural-numbers
-  "Returns the sum of the square of the first 100 natural numbers"
+  "Returns the sum of the square of the first 100 natural numbers."
   []
   (reduce + (map #(math/exp % 2) (range 1 101))))
 
 (defn- square-sum-100-natural-numbers
-  "Returns the square of the sum of the first 100 natural numbers"
+  "Returns the square of the sum of the first 100 natural numbers."
   []
   (math/exp (reduce + (range 1 101) ) 2))
 

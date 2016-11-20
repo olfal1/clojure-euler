@@ -2,7 +2,7 @@
   (:require [clojure-euler.helpers.math-helper :as math]))
 
 (defn solution-009
-  "Returns the product of the 3 elements of the Pythagorean triplet for which a + b + c = 1000"
+  "Returns the product of the 3 elements of the Pythagorean triplet for which a + b + c = 1000."
   []
   (loop [m 1]
     (let [n (/ (- 1000 (* 2 (math/exp m 2))) (* 2 m))
