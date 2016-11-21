@@ -14,9 +14,10 @@
   []
   (loop [current-index 0
          highest-product 0]
-    (if (> current-index (- (count thousand-digits-number) 13))
+    (if (= current-index (- (count thousand-digits-number) 13))
       highest-product
-      (let [substring (subs thousand-digits-number current-index (+ current-index 13))]
-        (if (> (product-of-numbers-in-string? substring) highest-product)
-          (recur (inc current-index) (product-of-numbers-in-string? substring))
+      (let [substring (subs thousand-digits-number current-index (+ current-index 13))
+            current-product (product-of-numbers-in-string? substring)]
+        (if (> current-product highest-product)
+          (recur (inc current-index) current-product)
           (recur (inc current-index) highest-product))))))
