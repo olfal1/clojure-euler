@@ -1,5 +1,5 @@
 # clojure-euler
-[![Build Status](https://travis-ci.org/olfal1/clojure-euler.svg?branch=master)](https://travis-ci.org/olfal1/clojure-euler)
+[![Build Status](https://travis-ci.org/olfal1/clojure-euler.svg?branch=draft/problems)](https://travis-ci.org/olfal1/clojure-euler)
 
 Learning Clojure with Project Euler
 

@@ -1,5 +1,6 @@
 (ns clojure-euler.sodominic.problem-010
-  (:require [clojure-euler.helpers.math-helper :as math]))
+  (:require
+    [clojure-euler.helpers.math-helper :as math]))
 
 (defn solution-010
   "Returns the sum of all primes below two million"
